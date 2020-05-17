@@ -906,7 +906,7 @@ main{
 					text-decoration: none;
 					position: relative;
 					&:hover{			
-						color: black;
+						color: #fff;
 					}
 					&:active{
 						color: #c7b299;
@@ -920,23 +920,12 @@ main{
 					    top: 5px;
 					    left: 88px;
 					}
-					&:hover .recposts-container-itm-wrp-link:after{
-						content: "";
-					    border: 4px solid transparent;
-					    border-left: 7px solid black;
-					    display: block;
-					    position: absolute;
-					    top: 6px;
-					    left: 88px;
+					&:hover:after{
+					    border-left: 7px solid #fff;
 					}
-					&:active .recposts-container-itm-wrp-link:after{
-						content: "";
-					    border: 4px solid transparent;
+					&:active:after{
 					    border-left: 7px solid #c7b299;
-					    display: block;
-					    position: absolute;
-					    top: 6px;
-					    left: 88px;
+
 					}
 				}
 			}
@@ -1047,7 +1036,7 @@ main{
 				text-decoration: none;
 				position: relative;
 				&:hover{			
-						color: black;
+						color: #555555;
 					}
 				&:active{
 						color: #d1d1d1;
@@ -1061,11 +1050,11 @@ main{
 				    top: 5px;
 				    left: 88px;
 				}
-				&:hover .footer-top-wrp-logo-link:after{			
-					color: black;
+				&:hover:after{ 
+					border-left: 7px solid #555555; 
 				}
-				&:active .footer-top-wrp-logo-link:after{			
-					color: #d1d1d1;
+				&:active:after{			
+					border-left: 7px solid #d1d1d1; 
 				}
 			}
 		}
@@ -1219,9 +1208,9 @@ main{
 				position: absolute;
 				top: 5px;
 				left: -12px;
-				&:nth-child(1){
-					display: none;
-				}
+			}
+			&:first-child:after{
+				display: none;
 			}
 		}
 		&-txt{
@@ -1243,11 +1232,11 @@ main{
 				background-color: #252525;
 				position: absolute;
 				top: 5px;
-				left: -20px;
-				&:nth-child(1){
-					display: none;
-				}
-			}				
+				left: -20px;				
+			}
+			&:not(:last-child):after{
+				display: none;
+			}		
 		}
 	}
 }

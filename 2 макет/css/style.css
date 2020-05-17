@@ -763,7 +763,7 @@ main {
           text-decoration: none;
           position: relative; }
           .recposts-container-itm-wrp-link:hover {
-            color: black; }
+            color: #fff; }
           .recposts-container-itm-wrp-link:active {
             color: #c7b299; }
           .recposts-container-itm-wrp-link:after {
@@ -774,22 +774,10 @@ main {
             position: absolute;
             top: 5px;
             left: 88px; }
-          .recposts-container-itm-wrp-link:hover .recposts-container-itm-wrp-link:after {
-            content: "";
-            border: 4px solid transparent;
-            border-left: 7px solid black;
-            display: block;
-            position: absolute;
-            top: 6px;
-            left: 88px; }
-          .recposts-container-itm-wrp-link:active .recposts-container-itm-wrp-link:after {
-            content: "";
-            border: 4px solid transparent;
-            border-left: 7px solid #c7b299;
-            display: block;
-            position: absolute;
-            top: 6px;
-            left: 88px; }
+          .recposts-container-itm-wrp-link:hover:after {
+            border-left: 7px solid #fff; }
+          .recposts-container-itm-wrp-link:active:after {
+            border-left: 7px solid #c7b299; }
 
 .recposts-btn {
   text-align: center;
@@ -872,7 +860,7 @@ main {
     text-decoration: none;
     position: relative; }
     .footer-top-wrp-logo-link:hover {
-      color: black; }
+      color: #555555; }
     .footer-top-wrp-logo-link:active {
       color: #d1d1d1; }
     .footer-top-wrp-logo-link:after {
@@ -883,10 +871,10 @@ main {
       position: absolute;
       top: 5px;
       left: 88px; }
-    .footer-top-wrp-logo-link:hover .footer-top-wrp-logo-link:after {
-      color: black; }
-    .footer-top-wrp-logo-link:active .footer-top-wrp-logo-link:after {
-      color: #d1d1d1; }
+    .footer-top-wrp-logo-link:hover:after {
+      border-left: 7px solid #555555; }
+    .footer-top-wrp-logo-link:active:after {
+      border-left: 7px solid #d1d1d1; }
   .footer-top-wrp-recposts-title {
     display: block;
     color: #ffffff;
@@ -1004,8 +992,8 @@ main {
         position: absolute;
         top: 5px;
         left: -12px; }
-        .footer-bottom-item-link:after:nth-child(1) {
-          display: none; }
+      .footer-bottom-item-link:first-child:after {
+        display: none; }
     .footer-bottom-item-txt {
       width: 320px;
       color: #555555;
@@ -1025,5 +1013,5 @@ main {
         position: absolute;
         top: 5px;
         left: -20px; }
-        .footer-bottom-item-txt:after:nth-child(1) {
-          display: none; }
+      .footer-bottom-item-txt:not(:last-child):after {
+        display: none; }
